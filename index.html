@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<body >
+<div ng-app="myApp" ng-controller="MainController">
+<form name="form">
+<label for="name">Name</label>
+<input type="text" name="name" ng-model="player.name">
+<label for="name">Email</label>
+<input type="text" name="email" ng-model="player.email">
+<label for="name">Url</label>
+<input type="text" name="url" ng-model="player.url">
+<label for="name" >age</label>
+<input type="text" name="age" ng-model="player.age">
+<input type="submit" ng-click="saveUser(player)" value="savePlayer">
+</form>
+
+
+<h3>Saved Data</h3>
+<p>Name: <span>{{saved.name}}</span> </p>
+<p>Email: <span ng-bind="saved.email"></span> </p>
+<p>URL: <span ng-bind="saved.url"></span> </p>
+<p>age: <span ng-bind="saved.age"></span> </p>
+</div>
+<script src="js/shared/angular.min.js"></script>
+<script src="js/controllers/mainController.js"></script>
+</body>
+</html>
